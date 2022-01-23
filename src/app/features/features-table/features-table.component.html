@@ -1,0 +1,12 @@
+<p-panel header="Application Features" class="p-panel-features" styleClass="p-component-features">
+  <ng-template pTemplate="icons">
+    <p-button label="Add" icon="pi pi-plus" iconPos="left" (onClick)="handleAddClick()"></p-button>
+  </ng-template>
+  <ag-grid-angular
+    class="ag-theme-alpine"
+    [rowData]="rowData|async"
+    [columnDefs]="columnDefs"
+    [gridOptions]="gridOptions"
+  >
+  </ag-grid-angular>
+</p-panel>

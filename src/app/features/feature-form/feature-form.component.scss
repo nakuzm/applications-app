@@ -1,0 +1,21 @@
+:host {
+  .field {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    label {
+      margin-bottom: 10px;
+    }
+  }
+
+  .actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: end;
+  }
+}

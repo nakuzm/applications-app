@@ -1,0 +1,11 @@
+<form [formGroup]="form">
+  <div class="field">
+    <label>Technical Name</label>
+    <input type="text" pInputText formControlName="technicalName" />
+  </div>
+</form>
+
+<div class="actions">
+  <p-button label="Save" (onClick)="handleSave()" [disabled]="form.invalid"></p-button>
+</div>
+

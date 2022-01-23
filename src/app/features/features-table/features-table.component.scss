@@ -1,0 +1,17 @@
+:host {
+  .p-panel-features {
+    display: flex;
+    height: 100%;
+
+    ::ng-deep .p-component-features {
+      display: grid;
+      grid-template-columns: [col] auto;
+      grid-template-rows: [row] 60px [row] auto;
+      width: 100%;
+
+      .p-panel-content {
+        height: 100%;
+      }
+    }
+  }
+}
