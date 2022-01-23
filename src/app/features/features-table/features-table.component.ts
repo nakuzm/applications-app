@@ -24,17 +24,17 @@ export class FeaturesTableComponent implements OnInit {
     {
       cellRendererFramework: BtnCellRendererComponent,
       cellRendererParams: {
-        clicked: (field: any, action: string) => {
+        clicked: (data: any, action: string) => {
           if (action === 'edit') {
             this.dialogService.open(FeatureFormComponent, {
               header: 'Edit Feature',
               width: '600px',
-              data: field,
+              data,
             });
             return;
           }
           if (action === 'archive') {
-            this.store.dispatch(new FeaturesActions.ArchiveFeature(field));
+            this.store.dispatch(new FeaturesActions.ArchiveFeature(data));
           }
         },
       },
