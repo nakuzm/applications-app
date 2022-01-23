@@ -22,7 +22,12 @@ export class FeatureFormComponent implements OnInit {
     public ref: DynamicDialogRef,
     public config: DynamicDialogConfig
   ) {
-    this.form.patchValue(this.config.data ?? {});
+    this.form.patchValue({
+      ...this.config.data,
+      effectiveDate:
+        this.config.data?.effectiveDate &&
+        new Date(this.config.data?.effectiveDate),
+    });
   }
 
   ngOnInit(): void {}
