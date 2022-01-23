@@ -6,9 +6,9 @@ import { Store } from '@ngxs/store';
 import { FeaturesState } from '../../app-state/features/features.state';
 import { DialogService } from 'primeng/dynamicdialog';
 import { FeatureFormComponent } from '../feature-form/feature-form.component';
-import { BtnCellRendererComponent } from '../../table/btn-cell-renderer.component';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FeaturesActions } from '../../app-state/features/features.actions';
+import { ActionsCellComponent } from '../../table/actions-cell/actions-cell.component';
 
 @Component({
   selector: 'app-features-table',
@@ -20,9 +20,10 @@ export class FeaturesTableComponent implements OnInit {
   columnDefs: ColDef[] = [
     {
       field: 'technicalName',
+      flex: 1,
     },
     {
-      cellRendererFramework: BtnCellRendererComponent,
+      cellRendererFramework: ActionsCellComponent,
       cellRendererParams: {
         clicked: (data: any, action: string) => {
           if (action === 'edit') {
@@ -48,6 +49,7 @@ export class FeaturesTableComponent implements OnInit {
         relativeTo: this.route,
       });
     },
+    rowHeight: 60,
   };
 
   constructor(
