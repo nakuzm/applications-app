@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogService } from 'primeng/dynamicdialog';
 import { MessageService } from 'primeng/api';
 import { BtnCellRendererComponent } from './table/btn-cell-renderer.component';
+import { ToastModule } from 'primeng/toast';
 
 @NgModule({
   declarations: [AppComponent, BtnCellRendererComponent],
@@ -18,6 +19,7 @@ import { BtnCellRendererComponent } from './table/btn-cell-renderer.component';
     AgGridModule.withComponents([BtnCellRendererComponent]),
     AppStateModule,
     BrowserAnimationsModule,
+    ToastModule,
   ],
   providers: [DialogService, MessageService],
   bootstrap: [AppComponent],

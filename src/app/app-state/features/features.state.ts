@@ -31,6 +31,7 @@ export class FeaturesState {
       tap(() =>
         this.messageService.add({
           summary: `Feature '${payload.technicalName}' added successfully`,
+          severity: 'success',
         })
       ),
       tap(() => {
@@ -50,6 +51,7 @@ export class FeaturesState {
       tap(() =>
         this.messageService.add({
           summary: `Feature '${payload.technicalName}' archived successfully`,
+          severity: 'success',
         })
       ),
       tap(() => {
@@ -72,6 +74,7 @@ export class FeaturesState {
       tap(() =>
         this.messageService.add({
           summary: `Feature '${payload.technicalName}' updated successfully`,
+          severity: 'success',
         })
       ),
       tap(() => {

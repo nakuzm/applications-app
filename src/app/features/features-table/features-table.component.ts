@@ -20,11 +20,6 @@ export class FeaturesTableComponent implements OnInit {
   columnDefs: ColDef[] = [
     {
       field: 'technicalName',
-      cellRendererParams: {
-        clicked: (field: any, action: string) => {
-          console.log(field);
-        },
-      },
     },
     {
       cellRendererFramework: BtnCellRendererComponent,
@@ -49,7 +44,7 @@ export class FeaturesTableComponent implements OnInit {
   rowData: Observable<ApplicationFeature[]>;
   gridOptions = {
     onRowClicked: (data: any) => {
-      this.router.navigate([data.data.technicalName], {
+      this.router.navigate([data.data.id], {
         relativeTo: this.route,
       });
     },
