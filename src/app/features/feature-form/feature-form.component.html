@@ -3,6 +3,18 @@
     <label>Technical Name</label>
     <input type="text" pInputText formControlName="technicalName" />
   </div>
+  <div class="field">
+    <label>Display Name</label>
+    <input type="text" pInputText formControlName="displayName" />
+  </div>
+  <div class="field">
+    <label>Effective Date</label>
+    <p-calendar formControlName="effectiveDate" [showTime]="true" appendTo="body"></p-calendar>
+  </div>
+  <div class="field">
+    <label>Description</label>
+    <textarea pInputTextarea formControlName="description"></textarea>
+  </div>
 </form>
 
 <div class="actions">

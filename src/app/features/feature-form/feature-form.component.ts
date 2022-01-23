@@ -12,6 +12,9 @@ import { DynamicDialogConfig, DynamicDialogRef } from 'primeng/dynamicdialog';
 export class FeatureFormComponent implements OnInit {
   form: FormGroup = new FormGroup({
     technicalName: new FormControl('', Validators.required),
+    displayName: new FormControl(''),
+    description: new FormControl(''),
+    effectiveDate: new FormControl(''),
   });
 
   constructor(
