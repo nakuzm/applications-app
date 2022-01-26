@@ -15,7 +15,13 @@ export class FeatureFormComponent implements OnInit {
     displayName: new FormControl(''),
     description: new FormControl(''),
     effectiveDate: new FormControl(''),
+    ApplicationIds: new FormControl(undefined, Validators.required),
   });
+  applicationIdsOptions = [
+    { label: 'A', value: 'A' },
+    { label: 'B', value: 'B' },
+    { label: 'C', value: 'C' },
+  ];
 
   constructor(
     public store: Store,

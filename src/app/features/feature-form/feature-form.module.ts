@@ -6,6 +6,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { CalendarModule } from 'primeng/calendar';
+import { MultiSelectModule } from 'primeng/multiselect';
 
 @NgModule({
   declarations: [FeatureFormComponent],
@@ -17,6 +18,7 @@ import { CalendarModule } from 'primeng/calendar';
     ButtonModule,
     InputTextareaModule,
     CalendarModule,
+    MultiSelectModule,
   ],
 })
 export class FeatureFormModule {}

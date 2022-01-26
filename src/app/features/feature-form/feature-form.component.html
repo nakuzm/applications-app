@@ -8,6 +8,10 @@
     <input type="text" pInputText formControlName="displayName" />
   </div>
   <div class="field">
+    <label>Application Ids</label>
+    <p-multiSelect [options]="applicationIdsOptions" formControlName="ApplicationIds" appendTo="body" class="select-application-ids"></p-multiSelect>
+  </div>
+  <div class="field">
     <label>Effective Date</label>
     <p-calendar formControlName="effectiveDate" [showTime]="true" appendTo="body"></p-calendar>
   </div>

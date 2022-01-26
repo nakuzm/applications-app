@@ -37,6 +37,10 @@ export class FeaturesTableComponent implements OnInit {
           : '',
     },
     {
+      field: 'ApplicationIds',
+      flex: 1,
+    },
+    {
       cellRendererFramework: ActionsCellComponent,
       cellRendererParams: {
         clicked: (data: any, action: string) => {
