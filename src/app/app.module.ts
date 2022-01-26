@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogService } from 'primeng/dynamicdialog';
 import { MessageService } from 'primeng/api';
 import { ToastModule } from 'primeng/toast';
-import { TableModule } from './table/table.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,7 +17,6 @@ import { TableModule } from './table/table.module';
     AppStateModule,
     BrowserAnimationsModule,
     ToastModule,
-    TableModule,
   ],
   providers: [DialogService, MessageService],
   bootstrap: [AppComponent],

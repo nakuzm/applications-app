@@ -13,5 +13,6 @@ import { ActionsCellComponent } from './actions-cell/actions-cell.component';
     ButtonModule,
     RippleModule,
   ],
+  exports: [AgGridModule],
 })
 export class TableModule {}
